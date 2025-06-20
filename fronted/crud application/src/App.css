@@ -1,0 +1,222 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  background-color: #2f2f2f;
+  color: #dcdcdc;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+.App {
+  background: linear-gradient(135deg, #2f2f2f, #1a1a1a);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  padding: 3rem;
+  border-radius: 20px;
+  box-shadow: 0 12px 40px 0 rgba(31, 38, 135, 0.5);
+  max-width: 720px;
+  margin: 3rem auto;
+  color: #dcdcdc;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.task-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+  background: rgba(60, 70, 90, 0.75);
+  padding: 2.5rem 3rem;
+  border-radius: 20px;
+  box-shadow: 0 8px 50px rgba(0, 0, 0, 0.25);
+}
+
+.task-form h2 {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #cddc39;
+  margin-bottom: 2rem;
+  text-shadow: 0 0 10px rgba(205, 220, 57, 0.9);
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.task-input {
+  padding: 1.2rem 1.8rem;
+  border: 2px solid #7a9a2f;
+  border-radius: 18px;
+  font-size: 1.3rem;
+  background: rgba(255, 255, 255, 0.18);
+  color: #e6e6b8;
+  transition: border-color 0.4s ease, background-color 0.4s ease, box-shadow 0.4s ease;
+  box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.5);
+  letter-spacing: 0.05em;
+  font-weight: 600;
+}
+
+.task-input::placeholder {
+  color: #b8b88f;
+  font-style: italic;
+  font-weight: 400;
+}
+
+.task-input:focus {
+  outline: none;
+  border-color: #d4e157;
+  background: rgba(255, 255, 255, 0.35);
+  box-shadow: 0 0 15px 5px #d4e157;
+}
+
+.submit-button {
+  background-color: #7a9a2f;
+  color: #f5f5d5;
+  padding: 1.2rem 2.5rem;
+  border: none;
+  border-radius: 20px;
+  font-weight: 800;
+  cursor: pointer;
+  font-size: 1.2rem;
+  letter-spacing: 1.5px;
+  transition: background-color 0.4s ease, box-shadow 0.4s ease, transform 0.4s ease;
+  box-shadow: 0 8px 25px rgba(122, 154, 47, 0.8);
+  text-transform: uppercase;
+  align-self: center;
+  user-select: none;
+}
+
+.submit-button:hover {
+  background-color: #d4e157;
+  box-shadow: 0 10px 40px rgba(212, 225, 87, 1);
+  transform: scale(1.15);
+}
+
+.task-list {
+  background: rgba(46, 52, 64, 0.75);
+  border-radius: 16px;
+  box-shadow: 0 6px 40px rgba(0, 0, 0, 0.15);
+  padding: 1.5rem;
+  list-style: none;
+  margin: 0;
+}
+
+.task-item {
+  background: rgba(60, 70, 90, 0.85);
+  padding: 1.2rem;
+  margin-bottom: 1.2rem;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #dcdcdc;
+  font-size: 1.05rem;
+}
+
+.edit-button, .delete-button {
+  background-color: transparent;
+  border: none;
+  color: #9acd32;
+  cursor: pointer;
+  margin-left: 0.5rem;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.edit-button:hover {
+  color: #6b8e23;
+  transform: scale(1.1);
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.delete-button:hover {
+  color: #556b2f;
+  transform: scale(1.1);
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+button {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 0.9rem;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+h1, h2 {
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  margin-bottom: 1rem;
+  color: #cddc39;
+  text-shadow: 0 0 5px rgba(205, 220, 57, 0.7);
+}
+
+.App h1 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.task-item strong {
+  font-size: 1.1rem;
+  color: #dcdcdc;
+}
+
+.task-item button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  margin-left: 0.5rem;
+  font-weight: 600;
+  color: #9acd32;
+  padding: 0.3rem 0.6rem;
+  border-radius: 4px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.task-item button:hover {
+  background-color: rgba(107, 142, 35, 0.3);
+  color: #6b8e23;
+  transform: scale(1.1);
+}
