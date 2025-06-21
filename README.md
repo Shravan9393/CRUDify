@@ -61,7 +61,7 @@ The backend is a RESTful API server built with **Node.js** and **Express.js**, c
 
 You can test the backend API endpoints using Postman. Import the Postman collection from the following temporary link:
 
-[Postman Collection Link - Attach your Postman API testing link here](https://documenter.getpostman.com/view/35001767/2sB2xBDVUA)
+[Postman Collection Link](https://documenter.getpostman.com/view/35001767/2sB2xBDVUA)
 
 ---
 
