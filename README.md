@@ -97,11 +97,9 @@ npm test
 ## Test Coverage
 The test coverage report is generated in the `coverage/lcov-report` directory.
 
-To view the coverage report, open:
-```
-coverage/lcov-report/index.html
-```
-in your browser.
+To view the coverage report, Cick on below link:
+
+.[Test Report](https://shravan9393.github.io/CRUDify/)
 
 ![Test Coverage Screenshot](images/Screenshot%202025-06-22%20122526.png)
 
