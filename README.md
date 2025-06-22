@@ -83,6 +83,32 @@ You can test the backend API endpoints using Postman. Import the Postman collect
 
 ---
 
+## How to Run Tests
+Run the test suite with coverage:
+```
+npm test
+```
+
+## Testing Frameworks/Tools Used
+- Jest: JavaScript testing framework
+- Supertest: HTTP assertions for API testing
+- mongodb-memory-server: In-memory MongoDB for integration tests
+
+## Test Coverage
+The test coverage report is generated in the `coverage/lcov-report` directory.
+
+To view the coverage report, open:
+```
+coverage/lcov-report/index.html
+```
+in your browser.
+
+![Test Coverage Screenshot](images/Screenshot%202025-06-22%20122526.png)
+
+
+
+---
+
 ## Author
 
 Developed by Shravan
