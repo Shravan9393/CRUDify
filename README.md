@@ -123,12 +123,12 @@ Here is a screenshot from the Keploy dashboard showing successful API test cases
 
 ### test-summary
 
-![Keploy Test Report](testreport/testSummary.png)
-![Keploy Test Report](testreport/report.png)
+![Keploy Test Report](testReport/testSummary.png)
+![Keploy Test Report](testReport/report.png)
 
 ### Keploy Api Chrome Extension 
 
-![Keploy Test Report](testreport/Screenshot%202025-06-28%20080507.png)
+![Keploy Chrome Extension Result](testReport/apiRes.png)
 
 
 ##  GitHub Actions (CI/CD) Integration
