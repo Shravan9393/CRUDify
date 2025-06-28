@@ -31,6 +31,13 @@ describe('Task API Endpoints', () => {
     expect(res.body.title).toBe('API Test Task');
   });
 
+  it('POST /api/tasks - should fail to create a task without title', async () => {
+    const res = await request(app)
+      .post('/api/tasks')
+      .send({});
+    expect(res.statusCode).toBeGreaterThanOrEqual(400);
+  });
+
   it('GET /api/tasks - should get all tasks', async () => {
     await Task.create({ title: 'Task 1' });
     await Task.create({ title: 'Task 2' });
@@ -38,6 +45,11 @@ describe('Task API Endpoints', () => {
     const res = await request(app).get('/api/tasks');
     expect(res.statusCode).toEqual(200);
     expect(res.body.length).toBe(2);
+  });
+
+  it('GET /api/tasks/:id - should return 404 for non-existent task', async () => {
+    const res = await request(app).get('/api/tasks/507f1f77bcf86cd799439011');
+    expect(res.statusCode).toEqual(404);
   });
 
   it('PUT /api/tasks/:id - should update a task', async () => {
@@ -51,6 +63,13 @@ describe('Task API Endpoints', () => {
     expect(res.body.title).toBe('Updated Title');
   });
 
+  it('PUT /api/tasks/:id - should return 404 for updating non-existent task', async () => {
+    const res = await request(app)
+      .put('/api/tasks/507f1f77bcf86cd799439011')
+      .send({ title: 'Updated Title' });
+    expect(res.statusCode).toEqual(404);
+  });
+
   it('DELETE /api/tasks/:id - should delete a task', async () => {
     const task = await Task.create({ title: 'To be deleted' });
 
@@ -58,5 +77,10 @@ describe('Task API Endpoints', () => {
 
     expect(res.statusCode).toEqual(200);
     expect(res.body).toHaveProperty('message', 'Task Deleted');
+  });
+
+  it('DELETE /api/tasks/:id - should return 404 for deleting non-existent task', async () => {
+    const res = await request(app).delete('/api/tasks/507f1f77bcf86cd799439011');
+    expect(res.statusCode).toEqual(404);
   });
 });

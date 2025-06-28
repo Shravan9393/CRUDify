@@ -99,7 +99,7 @@ The test coverage report is generated in the `coverage/lcov-report` directory.
 
 To view the coverage report, open:
 ```
-coverage/lcov-report/index.html
+CRUDify/backend/coverage/lcov-report/index.html
 ```
 in your browser.
 

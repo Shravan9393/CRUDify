@@ -1,0 +1,37 @@
+name: Keploy API Test
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  keploy-api-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+
+      - name: Install dependencies
+        run: npm install
+        working-directory: ./CRUDify/backend
+
+      - name: Download and install Keploy CLI
+        run: |
+          curl -LO https://github.com/keploy/keploy/releases/latest/download/keploy-linux-amd64.tar.gz
+          tar -xzf keploy-linux-amd64.tar.gz
+          sudo mv keploy /usr/local/bin/
+        shell: bash
+
+      - name: Run Keploy API tests
+        run: keploy test
+        working-directory: ./CRUDify/backend
