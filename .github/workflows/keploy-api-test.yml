@@ -35,3 +35,13 @@ jobs:
       - name: Run Keploy API tests
         run: keploy test
         working-directory: ./CRUDify/backend
+
+- name: Install Keploy CLI
+  run: |
+    curl --silent -L https://keploy.io/ent/install.sh | bash
+
+
+- name: Run Keploy Test Suite
+  run: |
+    export KEPLOY_API_KEY={KEPLOY_API_KEY}== && keploy test-suite --app=6e75baf8-6881-4189-af8f-6c8b228ab22c --base-path http://localhost:5000/api --cloud
+

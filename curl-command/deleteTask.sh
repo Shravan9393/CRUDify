@@ -1,0 +1,1 @@
+curl -x --request DELETE 'http://localhost:5000/api/tasks/{taskId}'

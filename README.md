@@ -113,6 +113,39 @@ To view the coverage report, Cick on below link:
 
 
 
+##  Keploy AI Test Report
+
+Here is a screenshot from the Keploy dashboard showing successful API test cases:
+
+### test-details
+
+![Keploy Test Report](testReport/testDetails.png)
+
+### test-summary
+
+![Keploy Test Report](testreport/testSummary.png)
+![Keploy Test Report](testreport/report.png)
+
+### Keploy Api Chrome Extension 
+
+![Keploy Test Report](testreport/testSummary.png)
+![Keploy Test Report](testreport/report.png)
+
+
+##  GitHub Actions (CI/CD) Integration
+
+This project uses GitHub Actions for continuous integration.  
+On each push, the workflow runs:
+
+
+- Install Keploy CLI
+- Run Keploy test suite
+
+🔗 [View GitHub Actions Workflow File](.github/workflows/keploy-api-test.yml)  
+
+
+
+
 ---
 
 ## Author
